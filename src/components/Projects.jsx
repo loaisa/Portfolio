@@ -8,8 +8,7 @@ const StyledProjects = styled.section`
     text-align: center;
 
     h2 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        
     }
 
     .projects-grid {
@@ -17,6 +16,7 @@ const StyledProjects = styled.section`
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         padding: 0 20px;
+
     }
 
     .project-card {
@@ -24,20 +24,24 @@ const StyledProjects = styled.section`
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            font-size: 2rem;
+        }
     }
 `;
 
-const Projects: React.FC = () => {
+const Projects = () => {
     const projects = [
         {
             title: 'Movie-Search-App',
             description: 'В данном проекте можно искать фильмы, ' +
-                'но к сожалению на английском языке. Дополинтельно можно добавлять фильмы в избранное.' +
-                ' Доступна карточка фильма с описанием и трейлером к фильму',
-            url:'https://loaisa.github.io/movie-search/'
+                'но к сожалению на английском языке. Дополнительно можно добавлять фильмы в избранное.' +
+                ' Доступна карточка фильма с описанием и трейлером к фильму. Проект адаптивный.',
+            url: 'https://loaisa.github.io/movie-search/'
         },
-        {title: 'Проект 2', description: 'Описание проекта 2'},
-        {title: 'Проект 3', description: 'Описание проекта 3'},
+        {title: 'CryptoCoin', description: 'Данный проект для поиска криптовалюты, использовалась openapi для запросов. Дополнительно попробовал использовать библиотеку Ant Design. И попробовал TypeScript.'},
+        {title: 'Mountain Parallax', description: 'Визульальный проект со слайдером, параллакс эффектом. В данном проекте использоватлось минимальное количество библиотек',url: 'https://loaisa.github.io/mountain/'},
     ];
 
     return (

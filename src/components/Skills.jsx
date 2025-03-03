@@ -9,7 +9,6 @@ const StyledSkills = styled.section`
     color: white;
 
     h2 {
-        font-size: 2.5rem;
         margin-bottom: 20px;
     }
 
@@ -31,8 +30,8 @@ const StyledSkills = styled.section`
     }
 `;
 
-const Skills: React.FC = () => {
-    const skills = ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Redux-Toolkit'];
+const Skills = () => {
+    const skills = ['React', 'TypeScript изучаю!', 'JavaScript', 'HTML', 'CSS', 'Redux-Toolkit изучаю!'];
 
     return (
         <StyledSkills id="skills">

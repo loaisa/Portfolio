@@ -8,7 +8,7 @@ const StyledHero = styled.section`
     color: black;
     background: linear-gradient(-45deg, #ee7752, #808080, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 20s ease infinite;
+    animation: gradient 15s ease infinite;
 
     h1 {
         font-size: 3rem;
@@ -33,12 +33,12 @@ const StyledHero = styled.section`
     }
 `;
 
-const Hero: React.FC = () => {
+const Hero= () => {
     return (
-        <StyledHero>
+        <StyledHero >
             <motion.h1
                 initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
+
                 transition={{ duration: 1 }}
                 whileInView={{ opacity: 1, y: 0 }}
             >
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
             </motion.h1>
             <motion.p
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+
                 transition={{ duration: 1, delay: 0.6}}
                 whileInView={{ opacity: 1, y: 0 }}
             >

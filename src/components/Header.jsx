@@ -6,10 +6,13 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background-color: #282c34;
     color: white;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 30px;
     
 `;
 
@@ -32,7 +35,15 @@ const Nav = styled.nav`
 
 const Header = () => {
 
-    const listNav = ['Обо мне', 'Навыки', 'Проекты', 'Контакты']
+    const HandleScroll=(id)=>{
+        const element = document.getElementById(id)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    const ListNav = ['Обо мне', 'Навыки', 'Проекты', 'Контакты']
+    const idNav = ['about', 'skills', 'projects', 'contacts']
 
     return (
         <StyledHeader>
@@ -44,18 +55,19 @@ const Header = () => {
                 <h1>Мое Портфолио</h1>
             </motion.div>
             <Nav>
-                {listNav.map((value, index) =>
+                {ListNav.map((value, index) =>
                     <motion.a
                         key={index}
-                        initial={{opacity: 0, x:200 }}
+                        initial={{opacity: 0, x:100 }}
                         transition={{duration: 1, delay: index * 0.2 }}
                         whileHover={{scale: 1.1}}
-                        whileInView={{ opacity: 1, x:0}}
-
+                        animate={{ opacity: 1, x:0}}
+                        onClick={()=>HandleScroll(idNav[index])}
                     >
                         {value}
                     </motion.a>
                 )}
+
             </Nav>
         </StyledHeader>
     );
