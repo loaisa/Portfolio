@@ -40,7 +40,8 @@ const Projects = () => {
                 ' Доступна карточка фильма с описанием и трейлером к фильму. Проект адаптивный.',
             url: 'https://loaisa.github.io/movie-search/'
         },
-        {title: 'CryptoCoin', description: 'Данный проект для поиска криптовалюты, использовалась openapi для запросов. Дополнительно попробовал использовать библиотеку Ant Design. И попробовал TypeScript.'},
+        {title: 'CryptoCoin', description: 'Данный проект для поиска криптовалюты, использовалась openapi для запросов. Дополнительно попробовал использовать библиотеку Ant Design. И попробовал TypeScript.',
+            url: 'https://loaisa.github.io/CryptoCoin/'},
         {title: 'Mountain Parallax', description: 'Визульальный проект со слайдером, параллакс эффектом. В данном проекте использоватлось минимальное количество библиотек',url: 'https://loaisa.github.io/mountain/'},
     ];
 
