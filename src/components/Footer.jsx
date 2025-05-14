@@ -24,6 +24,7 @@ const Footer = () => {
             <p>
                 Свяжитесь со мной: <a href="Webloaisa@gmail.com">Webloaisa@gmail.com</a>
             </p>
+            <p>https://github.com/loaisa</p>
         </FooterStyled>
     );
 };
