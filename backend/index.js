@@ -13,12 +13,16 @@ const app = express()
 const PORT = process.env.PORT || 3002
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000' || 'https://loaisa.github.io/Portfolio/',
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
+    exposedHeaders: ['Content-Range', 'X-Content-Range'],
 }))
 app.use(express.json())
+
+// Добавляем обработку preflight запросов
+app.options('*', cors())
 
 const transporter = nodemailer.createTransport({
     service: "gmail", 
