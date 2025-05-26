@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
-
 // API URL в зависимости от окружения
 const API_URL = process.env.NODE_ENV === 'production' 
-    ? 'https://your-railway-app.railway.app'  // URL вашего API на Railway
+    ? 'https://portfolio-production-2ac9.up.railway.app'  // URL API на Railway
     : 'http://localhost:3002';                // локальный URL для разработки
 
 const StyledContact = styled.section`
@@ -99,7 +98,7 @@ const StyledContact = styled.section`
         z-index: 1000;
     }
 `;
-
+console.log(API_URL);
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: '',
