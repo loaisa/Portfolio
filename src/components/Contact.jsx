@@ -49,8 +49,8 @@ const StyledContact = styled.section`
     }
 
     .error {
-        color: #ff6b6b;
-        font-size: 0.9rem;
+        color: #ff9a9a;
+        font-size: 1.2rem;
         text-align: left;
         margin-top: -10px;
     }
